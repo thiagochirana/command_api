@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'api#index'
   get 'api/posso_fazer_deploy'
   get 'api/frase_aleatoria'
 
