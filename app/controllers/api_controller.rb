@@ -4,7 +4,7 @@ require 'uri'
 
 class ApiController < ApplicationController
 
-  def deploy
+  def posso_fazer_deploy
     url = 'https://shouldideploy.today/api?tz=America%2FSao_Paulo'
     uri = URI.parse(url)
     req = Net::HTTP::Get.new(uri.request_uri)
@@ -12,7 +12,18 @@ class ApiController < ApplicationController
     https.use_ssl = true
     res = https.request(req)
     json = JSON.parse(res.body)
-    render json: json["message"]
+    msg = json["message"]
+    respond_to do |f|
+      f.json { render json: msg }
+    end
+  end
+  
+  def frase_aleatoria
+    p = Phrase.random
+    str = "\"#{p.text}\" , #{p.author}"
+    respond_to do |f|
+      f.json { render json: str }
+    end
   end
 end
 
