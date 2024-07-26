@@ -75,7 +75,7 @@ phrases = [
     author: "Sabe lá quem foi..."
   },
   {
-    text: "quem programa em python é guei",
+    text: "quem programa em Python é guei",
     author: "DevCurumin"
   },
   {
@@ -84,6 +84,10 @@ phrases = [
   },
   {
     text: "Ruby lang de macho",
+    author: "DevCurumin"
+  },
+  {
+    text: "https://x.com/DevCurumin <<< Quem não segue é dev bagre amante de Javascript",
     author: "DevCurumin"
   }
 ]
