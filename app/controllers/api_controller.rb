@@ -13,17 +13,13 @@ class ApiController < ApplicationController
     res = https.request(req)
     json = JSON.parse(res.body)
     msg = json["message"]
-    respond_to do |f|
-      f.json { render json: msg }
-    end
+    render json: msg
   end
   
   def frase_aleatoria
     p = Phrase.random
     str = "\"#{p.text}\" , #{p.author}"
-    respond_to do |f|
-      f.json { render json: str }
-    end
+    render json: str
   end
 end
 
