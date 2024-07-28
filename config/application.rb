@@ -38,5 +38,7 @@ module CommandApi
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    
+    config.hosts << "/.*\.decurumin\.com\.br/"
   end
 end
