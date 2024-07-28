@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'api#index'
-  get 'api/posso_fazer_deploy'
-  get 'api/frase_aleatoria'
+
+  namespace :chat do
+    get :posso_fazer_deploy
+    get :frase_aleatoria
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
